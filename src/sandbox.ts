@@ -103,3 +103,39 @@ let ninjaTwo:{
 
 //
 console.log('test')
+
+
+//type functions
+
+let greet: Function;
+
+// greet = 'hello'
+
+greet = ()=>{
+    console.log('hello, again');
+}
+
+const add = (a: number, b:number, c?:number|string)=>{
+    console.log(a+b);
+    console.log(c);
+}
+//use ?: for optional param
+const minus = (a: number, b:number, c?:number|string):number=>{
+    return a-b;
+}
+//):number to explicitly set return value as number
+console.log(add(1,2))
+
+/* using type declaration to set alias for string|number to avoid repeats */
+
+const logDetails = (uid: string|number, item:string)=>{
+    console.log(`${item} has a uid of ${uid}`);
+}
+
+const greet = (user: {name: string, uid: string | number})=>{
+    console.log(`${user.name} says hello`)
+}
+
+console.log('hello')
+
+// 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

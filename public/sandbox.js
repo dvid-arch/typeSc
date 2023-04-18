@@ -62,3 +62,26 @@ let ninjaTwo;
 //any type
 //
 console.log('test');
+//type functions
+let greet;
+// greet = 'hello'
+greet = () => {
+    console.log('hello, again');
+};
+const add = (a, b, c) => {
+    console.log(a + b);
+    console.log(c);
+};
+//use ?: for optional param
+const minus = (a, b, c) => {
+    return a - b;
+};
+//):number to explicitly set return value as number
+console.log(add(1, 2));
+/* using type declaration to set alias for string|number to avoid repeats */
+const logDetails = (uid, item) => {
+    console.log(`${item} has a uid of ${uid}`);
+};
+const greet = (user) => {
+    console.log(`${user.name} says hello`);
+};
